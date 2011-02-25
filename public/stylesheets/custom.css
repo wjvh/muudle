@@ -1,0 +1,461 @@
+@font-face
+{
+    font-family: GillSansUltraBold;
+    src: url(../fonts/GillSansUltraBold.ttf);
+}
+
+@font-face
+{
+    font-family: gautami;
+    src: url(../fonts/gautami.ttf);
+}
+
+@font-face
+{
+    font-family: gautamiBold;
+    font-weight: bold;
+    src: url(../fonts/gautamib.ttf);
+}
+
+/* CSS for sticky footer */
+html, body { height:100%; }
+
+#whiteBackground {
+    background-image: url(../images/bg.jpg);
+    background-repeat: repeat-x;
+    background-color: #ffffff;
+}
+
+/* Form CSS */
+div.field, div.actions {
+  margin-bottom: 10px;
+}
+
+#formBox {
+ margin: 0px auto;
+ width: 400px;
+ background: #f3f3f3;
+ padding: 20px;
+ font-size: 80%;
+}
+
+body {
+    font-family: Tahoma, Geneva, sans-serif;
+    color: #353535;
+    font-size: 14px;
+    margin: 0;
+    height: 100%;
+    background-color: #f3f3f3;
+}
+
+.topLine {
+    width: 100%;
+    height: 5px;
+    background: #38a8cd;
+    padding-left: 0px;
+    padding-right: 0px;
+}
+
+.cloudLayer {
+    width: 100%;
+    height: 120px;
+    background: url(../images/cloudLayer.png);
+    text-align: left;
+    margin-bottom: 10px;    
+}
+
+.header {
+    width: 968px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+.header img {
+    margin-top: 5px;
+}
+
+.container {
+    width: 968px;
+    margin: 0 auto;
+    padding-left: 0px;
+    padding-right: 0px;
+    overflow: hidden;
+}
+
+#mainImage {
+    float: left;
+    width: 711px;
+    height: 517px;
+    background: url(../images/landscape.jpg);
+}
+
+#rightColumnTop {
+    float: right;
+    width: 217px;
+    background: #eaf7ff;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    line-height: 75%;
+    opacity: 0.9;
+}
+
+#rightColumnTopContent {
+    padding-top: 10px;
+    background-color: transparent;
+}
+
+#rightColumnTopContent h1 {
+    font-family: GillSansUltraBold;
+    font-size: 35px;
+    letter-spacing: -3px;
+    color: #353535;
+}
+
+#rightColumnTopContent h2 {
+    font-size: 14px;
+    color: #38a8cd;
+    letter-spacing: 0px;
+    text-align: left;
+}
+
+#rightColumnTopContent p {
+    font-size: 75%;
+}
+
+#rightColumnBottom {
+    float: right;
+    width: 217px;
+    background: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+}
+
+#rightColumnBottomContent {
+    margin: 10px;
+    background-color: transparent;
+}
+
+#rightColumnBottomContent h1 {
+    font-family: GillSansUltraBold;
+    font-size: 35px;
+    letter-spacing: -3px;
+    color: #353535;
+    opacity: 0.9;
+}
+
+#rightColumnBottomContent h2 {
+    font-family: gautamiBold;
+    font-size: 30px;
+    color: #38a8cd;
+    letter-spacing: -2px;
+}
+
+#applicationSection {
+  width: 640px;
+  text-align: center;
+  margin: 0px auto;
+  margin-bottom: 20px;
+  font-size: 120%;
+  background: transparent;
+  opacity: 0.9;
+}
+
+#frontPageSection {
+  width: 691px;
+  height: 260px;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px; 
+  font-size: 120%;
+  padding: 10px;
+  padding-top: 20px;
+  background: #f3f3f3;
+  float: left;
+  opacity: 0.9;
+}
+
+section {
+}
+
+section h1 {
+  font-family: GillSansUltraBold;
+  font-size: 45px;
+  letter-spacing: -3px;
+  color: #353535;
+  text-align: center;
+}
+
+section h1 span {
+  font-family: gautamiBold;
+  font-size: 30px;
+  color: #353535;
+  letter-spacing: -2px;
+}
+
+section p span {
+   font-size: 120%;
+}
+
+hr {
+ border: 0;
+ width: 75%;
+ text-align: center;
+ margin: 0px auto;
+ color: #353535;
+ height: 1px;
+}
+
+footer {
+  width: 100%;
+  min-height: 150px;
+  background: #f3f3f3;
+  text-align: center;
+  padding-top: 5px;
+  background-image: url(../images/bgBottom.jpg);
+  background-repeat: repeat-x;
+  background-color: #f3f3f3;
+}
+
+#footerContainer {
+  margin: 0px auto;
+  margin-top: 10px;
+  width: 968px;
+}
+
+#copyright {
+ float: left;
+ font-size: 12px;
+ padding-left: 10px;
+}
+
+#counter {
+ float: right;
+ font-size: 12px;
+ padding-right: 20px;
+}
+
+footer nav {
+  float: none;
+  background: transparent;
+}
+
+#debug {
+ clear: both;
+}
+
+/* Profile CSS */
+#profileContainer {
+}
+
+#avatar {
+ padding-left: 85px;
+ float: left;
+}
+
+#mood {
+ padding-top: 60px;
+ float: left;
+ opacity: 0.9;
+}
+
+#bottomBar {
+ clear: both;
+}
+
+#userInfo {
+ text-align: left;
+ width: 240px;
+ height: 70px;
+ background: #f3f3f3;
+ float: left;
+ padding: 20px;
+ font-size: 85%;
+ margin-bottom: 20px;
+}
+
+#snitch {
+ width: 300px;
+ height: 70px;
+ font-size: 85%;
+ background: #eaf7ff;
+ float: right;
+ padding: 20px;
+ margin-bottom:20px
+}
+
+/* Zoo CSS */
+#zooContainer {
+}
+
+#zooContainer h1 {
+}
+
+#zooContainer h2 {
+ font-size: 75%;
+}
+
+#zooBox {
+ float: left;
+ width: 150px;
+ height: 150px;
+ background: #f3f3f3;
+ padding: 10px;
+ margin: 10px;
+}
+
+#zooBoxAvatar {
+}
+
+#zooBoxUserInfo {
+}
+
+/* Links */
+
+a {
+  color: #38a8cd;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #38a8cd;
+  text-decoration: underline;
+}
+
+a:visited {
+  color: #38a8cd;
+}
+
+/* Navigation */
+
+nav {
+  float: right;
+  margin-top: 20px;
+  background-color: #f3f3f3;
+  white-space: nowrap;
+  padding: 2px;
+}
+
+nav ul {
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0.2em 0;
+  color: #38a8cd;
+}
+
+nav ul li a {
+  padding: 0 5px;
+  font-weight: bold;
+  color: #38a8cd;
+}
+
+nav ul li a:visited {
+  color: #38a8cd;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+  color: #38a8cd;
+}
+
+/* Sign up button */
+
+a.signup_button {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  text-align: center;
+  width: 190px;
+  color: #fff;
+  background: #5a9c38;
+  font-size: 150%;
+  font-weight: bold;
+  padding: 20px;
+}
+
+/* Round corners */
+
+.round {
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
+}
+
+/* User show page */
+
+table.profile {
+  width: 100%;
+  margin-bottom: 0;
+}
+
+td.main {
+  width: 70%;
+  padding: 1em;
+}
+
+td.sidebar {
+  width: 30%;
+  padding: 1em;
+  vertical-align: top;
+  background: #ffc;
+}
+
+/* Error Messages CSS */
+
+.field_with_errors {
+  margin: 0px auto;
+  padding:5px;
+  background-color: #c9282d;
+  display: table;
+  text-align: center;
+}
+
+.field_with_errors label {
+  color: #fff;
+}
+
+#error_explanation {
+  width: 400px;
+  border: 2px solid #c9282d;
+  padding: 5px;
+  margin: 0px auto;
+  margin-bottom: 10px;
+  background-color: #fff;
+  text-align: center;
+}
+
+#error_explanation h2 {
+  text-align: center;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  margin-bottom: 10px;
+  background-color: #c9282d;
+  color: #fff;
+}
+
+#error_explanation p {
+  color: #353535;
+  margin: 0px auto;
+  padding: 5px;
+}
+
+#error_explanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+/* CSS for User index */
+ul.users {
+  margin-top: 1em;
+}
+
+.users li {
+  list-style: none;
+}

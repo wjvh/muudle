@@ -1,0 +1,20 @@
+<div class="cloudLayer">
+      <div class="topLine"></div>
+      <div class="header">
+          <%= link_to logo, home_path %>
+          <nav class="round">
+             <ul>
+             <% if signed_in? %>
+             <li><%= link_to "My Muudle", current_user %></li>
+             <li><%= link_to "The Zoo", users_path %></li>
+             <li><%= link_to "Settings", edit_user_path(current_user) %></li>
+             <li><%= link_to "Sign out", signout_path, :method => :delete %></li>
+             <% else %>
+             <li><%= link_to "What is Muudle?", about_path %></li>
+             <li><%= link_to "Sign in", signin_path %></li>
+             <li><%= link_to "Sign up!", signup_path %></li>
+             <% end %>
+             </ul>
+          </nav>
+     </div>
+</div>

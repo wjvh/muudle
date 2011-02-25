@@ -1,0 +1,7 @@
+<h1>This is muudle.&nbsp<span>(moo-dul) noun or verb</span></h1>
+<p><span>
+ A mood muddle. An emotion bubble.<br>
+ A huddle for how your friends are feeling.</span>
+</p>
+<hr><br>
+<%= link_to signupButton, signup_path %>

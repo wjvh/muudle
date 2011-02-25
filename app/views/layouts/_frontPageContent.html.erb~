@@ -1,0 +1,5 @@
+<div id="altSectionContent">
+<section class="round">
+    <%= yield %>
+</section>
+</div>

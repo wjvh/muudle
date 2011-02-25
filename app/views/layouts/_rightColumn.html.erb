@@ -1,0 +1,38 @@
+<div id="rightColumn">
+<div id="rightColumnTop" class="round">
+    <div id="rightColumnTopContent">
+         <%= form_for(:session, :url => '#') do |f| %>
+         <h2>
+	 <div class="field">
+	   <%= f.label :email,"E-mail address" %><br />
+	   <%= f.text_field :email %>
+	 </div>
+	 <div class="field">
+	   <%= f.label :password,"Password" %><br />
+	   <%= f.password_field :password %>
+	 </div>
+         </h2>
+	 <div class="actions">
+	   <%= f.submit "Sign in" %>
+	 </div>
+	 <% end %>
+	 <p>New user? Join the fun! <%= link_to "Sign up now!", '#' %></p>
+    </div>   
+</div>
+<div id="rightColumnBottom" class="round">
+    <div id="rightColumnBottomContent">
+         <h1>How are you?</h1>
+         <p>
+         It is the first thing you want to know in a real-life conversation.<br><br>
+         Imagine knowing how everyone in your life is feeling, at a glance.
+         </p>
+         <h2>Go Muudle!</h2>
+         <h1>Feelings, honest.</h1>
+         <p>
+         You vote on your friends' moods as well as your own. (And they vote on yours...)<br><br>
+         It's crowdsourced truth. For feelings.
+         </p>
+         <h2>Vote Muudle!</h2>
+    </div>   
+</div>
+</div>
