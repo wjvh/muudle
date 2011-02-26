@@ -53,9 +53,8 @@ Muudle::Application.configure do
   :address              => "mail.muudle.com",
   :port                 => 25,
   :domain               => 'muudle.com',
-  :user_name            => 'muudlebot+muudle.com',
-  :password             => 'baj_muudlebot!',
   :authentication       => :login,
-  :enable_starttls_auto => true  }
+  :user_name            => 'muudlebot+muudle.com',
+  :password             => 'baj_muudlebot!' }
   config.action_mailer.raise_delivery_errors = true
 end
