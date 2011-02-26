@@ -50,7 +50,7 @@ Muudle::Application.configure do
   config.action_mailer.default_url_options = { :host => 'muudle.com' }
   ActionMailer::Base.delivery_method = :sendmail
   ActionMailer::Base.sendmail_settings = {
-     :location       => 'http://www.muudle.com/usr/sbin/sendmail',
+     :location       => 'mail.muudle.com/usr/sbin/sendmail',
      :arguments      => '-i -t -f muudlebot@muudle.com'
   }
   config.action_mailer.raise_delivery_errors = true
