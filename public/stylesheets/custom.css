@@ -24,6 +24,7 @@ html, body { height:100%; }
     background-image: url(../images/bg.jpg);
     background-repeat: repeat-x;
     background-color: #ffffff;
+    text-align: center;
 }
 
 /* Form CSS */
@@ -80,6 +81,7 @@ body {
     padding-left: 0px;
     padding-right: 0px;
     overflow: hidden;
+    text-align: center;
 }
 
 #mainImage {

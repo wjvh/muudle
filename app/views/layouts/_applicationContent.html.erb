@@ -1,9 +1,7 @@
 <div id="applicationSection" class="round">
 <section class="round">
-     <% flash.each do |key, value| %>
-     <p class="notice"><%= notice %></p> 
-     <p class="alert"><%= alert %></p> 
-          <div class="flash <%= key %>"><%= value %></div>
+     <% flash.each do |key, value| %> 
+     <div class="flash <%= key %>"><%= value %></div>
      <% end %>
      <%= yield %>
 </section>
