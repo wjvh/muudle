@@ -51,7 +51,7 @@ Muudle::Application.configure do
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.smtp_settings = {
   :address              => "mail.muudle.com",
-  :port                 => 25,
+  :port                 => 26,
   :domain               => 'muudle.com',
   :authentication       => :login,
   :user_name            => 'muudlebot+muudle.com',
