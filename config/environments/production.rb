@@ -47,11 +47,14 @@ Muudle::Application.configure do
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
 
-  config.action_mailer.default_url_options = { :host => 'muudle.com' }
-  ActionMailer::Base.delivery_method = :sendmail
-  ActionMailer::Base.sendmail_settings = {
-     :location       => 'mail.muudle.com/usr/sbin/sendmail',
-     :arguments      => '-i -t -f muudlebot@muudle.com'
-  }
+  config.action_mailer.default_url_options = { :host => 'mail.muudle.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => "mail.muudle.com",
+  :port                 => 26,
+  :domain               => 'muudle.com',
+  :authentication       => :login,
+  :user_name            => 'muudlebot+muudle.com',
+  :password             => 'baj_muudlebot!' }
   config.action_mailer.raise_delivery_errors = true
 end
