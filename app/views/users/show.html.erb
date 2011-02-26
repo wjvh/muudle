@@ -1,0 +1,29 @@
+<div id="profileContainer">
+   <div id="userName"><h1>This is <%= @user.name %>.</h1></div>
+   <div id="avatar"> 
+      <img src="../images/avatars/<%= @user.avatar %>_<%= @user.mood %>.png" 
+               alt="Avatar: <%= @user.avatar %>, Mood: <%= @user.mood %>">
+   </div>
+   <div id="mood">
+   <h2>Currently <strong><%= @user.mood %></strong></h2>
+   </div>
+   <div id="bottomBar">
+    <div id="userInfo" class="round">
+      <strong>Name</strong> <%= @user.name %><br />
+      <strong>E-mail</strong> <%= @user.email %><br />
+      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+    </div>
+   <div id="snitch" class="round">
+      <strong>Psst...</strong><br />If you know <%= @user.name %>'s latest mood...<br />
+	<%= form_for @user, :url => user_path(@user), :html => { :method => :get } do |f| %>
+	<%= render 'shared/error_messages', :object => f.object %>
+ 
+	<div class="field">
+	  <%= f.label :mood, "Current mood is " %>
+	  <%= f.select :mood, User::MOODS %>
+          <%= f.submit "Snitch!" %>
+	</div>
+	<% end %>
+    </div>
+</div>   
+</div>
