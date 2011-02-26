@@ -48,4 +48,12 @@ Muudle::Application.configure do
   config.active_support.deprecation = :notify
 
   config.action_mailer.default_url_options = { :host => 'muudle.heroku.com' }
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = {
+  :address              => "mail.muudle.com",
+  :port                 => 26,
+  :user_name            => 'muudlebot+muudle.com',
+  :password             => 'baj_muudlebot!',
+  :authentication       => 'login',
+  :enable_starttls_auto => true  }
 end
