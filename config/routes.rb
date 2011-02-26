@@ -1,6 +1,13 @@
-Muudle::Application.routes.draw do
+Muudle::Application.routes.draw do |map|
   devise_for :users
   resources :users
+
+  # Duplicate to ensure /about isn't mistaken for user 'about' !!
+  match '/about',   :to => 'pages#about'
+
+  # Makes muudle.com/<Username> possible
+  map.resources :users, :as => '', :only => [:show]
+  map.resources :users
 
   root              :to => 'pages#home'
   match '/about',   :to => 'pages#about'

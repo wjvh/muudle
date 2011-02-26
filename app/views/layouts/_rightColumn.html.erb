@@ -1,21 +1,33 @@
 <div id="rightColumn">
 <div id="rightColumnTop" class="round">
     <div id="rightColumnTopContent">
-         <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
+  <%= form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f| %>
   <h2>
-  <p><%= f.label :email %><br />
-  <%= f.email_field :email %></p>
-
-  <p><%= f.label :password %><br />
-  <%= f.password_field :password %></p>
-
-  <% if devise_mapping.rememberable? -%>
-    <p><%= f.check_box :remember_me %> <%= f.label :remember_me %></p>
-  <% end -%>
+  <div class="field">
+  <%= f.label :email, "E-mail address" %><br>
+  <%= f.text_field :email %>
+  </div>
   </h2>
-  <p><%= f.submit "Sign in" %></p>
-<% end %>
-	 <p>New user? Join the fun! <%= link_to "Sign up now!", new_user_registration_path %></p>
+
+  <h2>
+  <div class="field">
+  <%= f.label :password, "Password" %><br>
+  <%= f.password_field :password %>
+  </div>
+  </h2>
+
+  <p>
+  <% if devise_mapping.rememberable? -%>
+  <%= f.check_box :remember_me %> <%= f.label :remember_me %>
+  <% end -%>
+  </p>
+
+  <div class="action">
+  <%= f.submit "Sign in" %>
+  </div>
+  <% end %>
+
+<br><p>New user? Join the fun! <%= link_to "Sign up now!", new_user_registration_path %></p>
     </div>   
 </div>
 <div id="rightColumnBottom" class="round">

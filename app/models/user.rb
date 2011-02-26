@@ -8,8 +8,15 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :country, :avatar, :mood, 
                   :password, :password_confirmation
 
-  validates :avatar, :presence => true
-  validates :mood,   :presence => true
+  validates :name,    :presence => true, :uniqueness => true
+  validates :country, :presence => true
+  validates :avatar,  :presence => true
+  validates :mood,    :presence => true
+
+  # Username URLs
+  def to_param
+     self.name
+  end
 
 AVATARS = ['', 'Dog', 'Cat', 'Hamster', 'Monkey', 'Snake', 'Elephant', 'Lion', 
            'Tiger', 'Kangaroo', 'Koala', 'Sheep', 'Chicken']

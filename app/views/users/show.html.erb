@@ -10,8 +10,9 @@
    <div id="bottomBar">
     <div id="userInfo" class="round">
       <strong>Name</strong> <%= @user.name %><br />
+      <strong>Country</strong> <%= @user.country %><br />
       <strong>E-mail</strong> <%= @user.email %><br />
-      <strong>URL</strong>  <%= link_to user_path(@user), @user %>
+      <strong>URL</strong>  muudle.com/<%= @user.name %>
     </div>
    <div id="snitch" class="round">
       <strong>Psst...</strong><br />If you know <%= @user.name %>'s latest mood...<br />

@@ -165,7 +165,7 @@ body {
 
 #frontPageSection {
   width: 691px;
-  height: 260px;
+  height: 290px;
   text-align: center;
   margin-top: 20px;
   margin-bottom: 20px; 
@@ -268,7 +268,7 @@ footer nav {
 #userInfo {
  text-align: left;
  width: 240px;
- height: 70px;
+ height: 80px;
  background: #f3f3f3;
  float: left;
  padding: 20px;
@@ -278,12 +278,12 @@ footer nav {
 
 #snitch {
  width: 300px;
- height: 70px;
+ height: 80px;
  font-size: 85%;
  background: #eaf7ff;
  float: right;
  padding: 20px;
- margin-bottom:20px
+ margin-bottom: 20px
 }
 
 /* Zoo CSS */
@@ -294,7 +294,7 @@ footer nav {
 }
 
 #zooContainer h2 {
- font-size: 75%;
+ font-size: 65%;
 }
 
 #zooBox {
@@ -336,6 +336,12 @@ nav {
   background-color: #f3f3f3;
   white-space: nowrap;
   padding: 2px;
+  padding-left: 8px;
+  padding-right: 5px;
+}
+
+nav span {
+  font-size: 75%;
 }
 
 nav ul {
