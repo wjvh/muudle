@@ -13,6 +13,7 @@
       <strong>Country</strong> <%= @user.country %><br />
       <strong>E-mail</strong> <%= @user.email %><br />
       <strong>URL</strong>  muudle.com/<%= @user.name %>
+
     </div>
    <div id="snitch" class="round">
       <strong>Psst...</strong><br />If you know <%= @user.name %>'s latest mood...<br />
@@ -26,5 +27,36 @@
 	</div>
 	<% end %>
     </div>
+
+   <div id="micropostsContainer">
+
+        <h1 class="micropost">What's up?</h1>
+        <%= form_for @micropost do |f| %>
+           <%= render 'shared/error_messages', :object => f.object %>
+
+           <div class="field">
+              <%= f.label :content, "Why that mood?" %>
+              <%= f.text_area :content %>
+           </div>
+
+           <div class="field">
+              <%= f.hidden_field :author, :value => current_user.name %>
+	      <%= f.hidden_field :agree, :value => "0" %>
+	      <%= f.hidden_field :disagree, :value => "0" %>
+	      <%= f.hidden_field :amused, :value => "0" %>
+           </div>
+
+           <div class="actions">
+              <%= f.submit "Submit" %>
+           </div>
+         <% end %>
+
+      <% unless @user.microposts.empty? %>
+        <table class="microposts" summary="User microposts">
+          <%= render @microposts %>
+        </table>
+        <%= will_paginate @microposts %>
+      <% end %>
+   </div>
 </div>   
 </div>

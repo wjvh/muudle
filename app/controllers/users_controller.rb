@@ -9,6 +9,9 @@ class UsersController < ApplicationController
   def show
     @user = User.find_by_name(params[:id])
     @title = @user.name
+    @micropost = Micropost.new if user_signed_in?
+    @microposts = @user.microposts.paginate(:page => params[:page])
+    
     @newMood = params[:user][:mood] if params[:user] and params[:user][:mood]
     if @newMood and @newMood != @user.mood and @user.update_attribute(:mood,@newMood)
       flash[:success] = "Profile updated."

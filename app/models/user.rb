@@ -8,6 +8,8 @@ class User < ActiveRecord::Base
   attr_accessible :name, :email, :country, :avatar, :mood, 
                   :password, :password_confirmation
 
+  has_many :microposts, :dependent => :destroy
+
   validates :name,    :presence => true, :uniqueness => true
   validates :country, :presence => true
   validates :avatar,  :presence => true

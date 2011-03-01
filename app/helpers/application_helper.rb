@@ -10,6 +10,10 @@ module ApplicationHelper
     end
   end
 
+  def user_of_page
+    User.find_by_name(params[:id])
+  end
+
   def logo
     image_tag("muudleLogo.png", :alt => "Muudle Logo")
   end

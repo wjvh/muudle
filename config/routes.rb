@@ -1,6 +1,7 @@
 Muudle::Application.routes.draw do |map|
   devise_for :users
   resources :users
+  resources :microposts, :only => [:create, :destroy]
 
   # Duplicate to ensure /about isn't mistaken for user 'about' !!
   match '/about',   :to => 'pages#about'
