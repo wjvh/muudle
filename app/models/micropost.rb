@@ -1,5 +1,5 @@
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :author, :agree, :disagree, :amused
+  attr_accessible :content, :author, :agree, :disagree, :amused, :mood, :belongs_to_id
 
   belongs_to :user
 
@@ -9,6 +9,8 @@ class Micropost < ActiveRecord::Base
   validates :agree, :presence => true
   validates :disagree, :presence => true
   validates :amused, :presence => true
+  validates :belongs_to_id, :presence => true
+  validates :mood, :presence => true
 
   default_scope :order => 'microposts.created_at DESC'
 end

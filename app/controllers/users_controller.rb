@@ -11,11 +11,6 @@ class UsersController < ApplicationController
     @title = @user.name
     @micropost = Micropost.new if user_signed_in?
     @microposts = @user.microposts.paginate(:page => params[:page])
-    
-    @newMood = params[:user][:mood] if params[:user] and params[:user][:mood]
-    if @newMood and @newMood != @user.mood and @user.update_attribute(:mood,@newMood)
-      flash[:success] = "Profile updated."
-    end
   end
 
   def name_redirect
