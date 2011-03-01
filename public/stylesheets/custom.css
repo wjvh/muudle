@@ -486,9 +486,16 @@ ul.users {
     height: 60px;
 }
 
+#micropostBlue {
+    padding: 10px;
+    background: #f1f7f9;
+    margin-bottom: 10px;
+    height: 60px;
+}
+
 #micropostImage {
     float: left;
-    padding: 2px;
+    padding-top: 7px;
     padding-right: 10px;
 }
 
@@ -503,45 +510,83 @@ ul.users {
 
 #micropostStamp { 
     float: left;
-    width: 250px;
+    width: 245px;
+    height: 19px;
     background: #e6e6e6;
     font-size: 65%;
     margin-top: 5px;
-    padding: 1px; 
+    padding-top: 5px; 
+}
+
+#micropostStampBlue {
+    float: left;
+    width: 245px;
+    height: 19px;
+    background: #d5edf5;
+    font-size: 65%;
+    margin-top: 5px;
+    padding-top: 5px;
 }
 
 #micropostAgree {
     float: left;
-    font-size: 65%;
-    background: #dfefc5;
-    padding: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background: #e2f0ca;
+    color: #8bb14a;
+    font-size: 85%;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 10px;
+}
+
+#micropostAgree input {
+    width: 65px;
+    height: 24px;
+    font-size: 80%;
+    color: #8bb14a;
+    background: #e2f0ca;
+    border: 1px solid #e2f0ca;
 }
 
 #micropostDisagree {
     float: left;
-    font-size: 65%;
-    background: #f1d7db;
-    padding: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background: #f2dbde;
+    font-size: 85%;
+    color: #f15d70;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 10px;
 }
 
+#micropostDisagree input {
+    width: 65px;
+    color: #f15d70;
+    height: 24px;
+    font-size: 80%;
+    background: #f2dbde;
+    border: 1px solid #f2dbde;
+}
+
 #micropostAmused {
     float: left;
-    font-size: 65%;
-    background: #fff9e0;
-    padding: 1px;
-    padding-left: 10px;
-    padding-right: 10px;
+    background: #fff9e3;
+    font-size: 85%;
+    color: #ffc800;
+    padding-left: 5px;
+    padding-right: 5px;
     margin-top: 5px;
     margin-left: 10px;
     margin-bottom: 10px;
+}
+
+#micropostAmused input {
+    width: 65px;
+    color: #ffc800;
+    height: 24px;
+    font-size: 80%;
+    background: #fff9e3;
+    border: 1px solid #fff9e3;
 }
