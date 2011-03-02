@@ -49,6 +49,6 @@ private
 
     def authorized_user
       @micropost = Micropost.find(params[:id])
-      redirect_to root_path unless current_user.name == @micropost.user.name
+      redirect_to root_path unless current_user.name == @micropost.user.name || current_user.name == @micropost.author
     end
 end
