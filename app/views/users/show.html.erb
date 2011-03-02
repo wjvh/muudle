@@ -56,4 +56,13 @@
    <div id="toggleMoodHistoryButton" class="round">
      <a href="javascript:animatedcollapse.toggle('micropostsListing')">View mood history</a>
    </div>
+   <div id="toggleUserInfoButton" class="round">
+     <a href="javascript:animatedcollapse.toggle('userInfo')">View user info</a>
+   </div>
+
+   <div id="userInfo" class="round">
+     <strong>Nickname</strong> <%= @user.name %><br>
+     <strong>Country</strong> <%= @user.country %><br>
+     <strong>E-mail</strong> <%= @user.email %><br>
+   </div>
 </div>

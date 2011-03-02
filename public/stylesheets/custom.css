@@ -253,15 +253,6 @@ footer nav {
  text-align: center;
 }
 
-#userInfo {
- width: 680px;
- background: #e6e6e6;
- float: left;
- padding: 20px;
- font-size: 85%;
- margin-bottom: 20px;
-}
-
 #currentStatus {
     margin: 0 auto;
     text-align: center;
@@ -310,9 +301,42 @@ footer nav {
     font-size: 80%;
 }
 
+#toggleMoodHistoryButton {
+    clear: both;
+    margin: 0 auto;
+    width: 100px;
+    padding: 5px;
+    background: #f3f3f3;
+    font-size: 60%;
+    margin-right: 10px;
+    margin-left: 250px;
+    float: left;
+}
+
+#toggleUserInfoButton {
+    float: left;
+    margin: 0 auto;
+    width: 100px;
+    padding: 5px;
+    background: #f3f3f3;
+    font-size: 60%;
+    margin-bottom: 10px;
+}
+
 #micropostsListing {
  display: none;
  clear: both;
+}
+
+
+#userInfo {
+ display: none;
+ text-align: left;
+ background: #e6e6e6;
+ padding: 20px;
+ font-size: 85%;
+ margin-top: 50px;
+ margin-bottom: 20px;
 }
 
 /* Zoo CSS */
@@ -336,9 +360,20 @@ footer nav {
 }
 
 #zooBoxAvatar {
+    float: left;
+    padding-left: 43px;
 }
 
 #zooBoxUserInfo {
+    clear: both;
+}
+
+#adminOptions {
+    width: 20px;
+    height: 20px;
+    float: right;
+    background: #e6e6e6;
+    font-size: 70%;
 }
 
 /* Links */
@@ -503,16 +538,6 @@ ul.users {
     height: 10px;
 }
 
-#toggleMoodHistoryButton {
-    clear: both;
-    margin: 0 auto;
-    width: 100px;
-    padding: 5px;
-    background: #f3f3f3;
-    font-size: 60%;
-    margin-top: 2px;
-}
-
 #micropost {
     padding: 10px;
     background: #f3f3f3;
@@ -617,4 +642,10 @@ ul.users {
     font-size: 80%;
     background: #fff9e3;
     border: 1px solid #fff9e3;
+}
+
+/* CSS for Pagination */
+
+.pagination {
+    font-size: 75%;
 }

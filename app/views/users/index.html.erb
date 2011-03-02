@@ -5,6 +5,14 @@
 
   <% @users.each do |user| %>
     <div id="zooBox" class="round">
+
+       <% if current_user.admin? %>
+       <div id="adminOptions" class="round">
+	 <%= link_to "x", user, :method => :delete, 
+	 :confirm => "You sure?", :title => "Delete #{user.name}" %>
+       </div>
+       <% end %>
+
        <div id="zooBoxAvatar">
           <img src="../images/avatars/<%= user.avatar %>_<%= user.mood %>.png" 
           alt="Avatar: <%= user.avatar %>, Mood: <%= user.mood %>" height=64 width=64>

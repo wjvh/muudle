@@ -13,4 +13,9 @@ class Micropost < ActiveRecord::Base
   validates :mood, :presence => true
 
   default_scope :order => 'microposts.created_at DESC'
+
+  # Number of units per page for will_paginate
+    def self.per_page
+      6
+    end
 end
