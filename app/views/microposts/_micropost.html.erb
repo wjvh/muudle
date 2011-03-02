@@ -1,9 +1,4 @@
 <div id="micropost" class="round">
-    <div id="micropostImage">
-      <img src="../images/avatars/<%= @user.avatar %>_<%= micropost.mood %>.png" 
-           alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
-    </div>
-    <div id="micropostContainer">
 
       <% if current_user.name == micropost.user.name || current_user.name == micropost.author %>
       <div id="adminOptions" class="round">
@@ -13,6 +8,11 @@
       </div>
       <% end %>
 
+    <div id="micropostImage">
+      <img src="../images/avatars/<%= @user.avatar %>_<%= micropost.mood %>.png" 
+           alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
+    </div>
+    <div id="micropostContainer">
       <div id="micropostContent"><strong><%= micropost.mood %></strong> because <%= micropost.content %></div>
 
       <% if @user.name == micropost.author %>
