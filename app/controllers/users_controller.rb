@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_filter :authenticate_user!, :except => [:show]
+  before_filter :admin_user,   :only => :destroy
 
   def destroy
     User.find_by_name(params[:id]).destroy
@@ -22,4 +23,10 @@ class UsersController < ApplicationController
   def name_redirect
      redirect_to users_path(@user)
   end
+
+private
+
+    def admin_user
+      redirect_to(root_path) unless current_user.admin?
+    end
 end

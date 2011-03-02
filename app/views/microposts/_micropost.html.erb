@@ -4,6 +4,15 @@
            alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
     </div>
     <div id="micropostContainer">
+
+      <% if current_user.name == micropost.user.name %>
+      <div id="adminOptions" class="round">
+      <%= link_to "x", micropost, :method => :delete,
+                                       :confirm => "You sure?",
+                                       :title => micropost.content %>
+      </div>
+      <% end %>
+
       <div id="micropostContent"><strong><%= micropost.mood %></strong> because <%= micropost.content %></div>
 
       <% if @user.name == micropost.author %>
