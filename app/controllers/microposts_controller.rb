@@ -35,7 +35,7 @@ class MicropostsController < ApplicationController
 
       redirect_to :back
     else
-      redirect_to about_path
+      redirect_to :back
     end
   end
 
