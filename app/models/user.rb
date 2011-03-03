@@ -17,7 +17,7 @@ class User < ActiveRecord::Base
                                    :dependent => :destroy
   has_many :followers, :through => :reverse_relationships, :source => :follower
 
-  validates :name,    :presence => true, :uniqueness => true
+  validates :name,    :presence => true, :uniqueness => true, :length => { :maximum => 15 }
   validates :country, :presence => true
   validates :avatar,  :presence => true
   validates :mood,    :presence => true
@@ -32,6 +32,10 @@ class User < ActiveRecord::Base
 
   def unfollow!(followed)
     relationships.find_by_followed_id(followed).destroy
+  end
+
+  def feed
+    Micropost.from_users_followed_by(self)
   end
 
   # Username URLs

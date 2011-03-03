@@ -68,7 +68,7 @@
        <div id="followInfo">
 	 <a href="<%= following_user_path(@user) %>">Following <%= @user.following.count %></a>,
 	 <a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> Followers</a>
-	 <div id="followForm"><%= render 'follow_form' if user_signed_in? %></div>
+	 <div id="followForm"><%= render 'follow_form' %></div>
        </div>
      </div>
      <div id="userRelationships">
@@ -77,7 +77,7 @@
 	<div id="smallZooBox" class="round">
 	    <div id="smallZooBoxAvatar">
 	      <img src="../images/avatars/<%= user.avatar %>_<%= user.mood %>.png" 
-		   alt="Avatar: <%= user.avatar %>, Mood: <%= user.mood %>" height=30 width=30>
+		   alt="Avatar: <%= user.avatar %>, Mood: <%= user.mood %>" height=35 width=35>
 	    </div>
 	    <div id="smallZooBoxUserInfo">
               <%= link_to user.name, user %>

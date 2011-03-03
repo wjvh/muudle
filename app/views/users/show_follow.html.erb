@@ -1,5 +1,9 @@
 <div id="zooContainer">
-  <h1><%= @title %></h1>
+  <% if @title == "Following" %>
+  <h1>Who's <%= @user.name %> following?</h1>
+  <% else %>
+  <h1>Who's following <%= @user.name %>?</h1>
+  <% end %>  
 
 <%= will_paginate %>
 
