@@ -17,7 +17,23 @@ class UsersController < ApplicationController
     @user = User.find_by_name(params[:id])
     @title = @user.name
     @micropost = Micropost.new if user_signed_in?
-    @microposts = @user.microposts.paginate(:page => params[:page], :per_page => 6)
+    @microposts = @user.microposts.paginate(:page => params[:page], :per_page => 12)
+
+    @friends = @user.following & @user.followers
+  end
+
+  def following
+    @user = User.find_by_name(params[:id])
+    @title = "Following"
+    @users = @user.following.paginate(:page => params[:page])
+    render 'show_follow'
+  end
+
+  def followers
+    @user = User.find_by_name(params[:id])
+    @title = "Followers"
+    @users = @user.followers.paginate(:page => params[:page])
+    render 'show_follow'
   end
 
   def name_redirect

@@ -9,11 +9,30 @@ class User < ActiveRecord::Base
                   :password, :password_confirmation
 
   has_many :microposts, :dependent => :destroy
+  has_many :relationships, :foreign_key => "follower_id",
+                           :dependent => :destroy
+  has_many :following, :through => :relationships, :source => :followed
+  has_many :reverse_relationships, :foreign_key => "followed_id",
+                                   :class_name => "Relationship",
+                                   :dependent => :destroy
+  has_many :followers, :through => :reverse_relationships, :source => :follower
 
   validates :name,    :presence => true, :uniqueness => true
   validates :country, :presence => true
   validates :avatar,  :presence => true
   validates :mood,    :presence => true
+
+  def following?(followed)
+    relationships.find_by_followed_id(followed)
+  end
+
+  def follow!(followed)
+    relationships.create!(:followed_id => followed.id)
+  end
+
+  def unfollow!(followed)
+    relationships.find_by_followed_id(followed).destroy
+  end
 
   # Username URLs
   def to_param

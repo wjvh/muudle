@@ -332,11 +332,52 @@ footer nav {
 #userInfo {
  display: none;
  text-align: left;
- background: #e6e6e6;
+ background: #f3f3f3;
  padding: 20px;
  font-size: 85%;
  margin-top: 50px;
  margin-bottom: 20px;
+ height: 125px;
+}
+
+#userDetails {
+    float: left;
+}
+
+#userRelationships {
+    float: left;
+    margin-left: 20px;
+    height: 100px;
+}
+
+#smallZooBox {
+    float: left;
+    width: 50px;
+    height: 50px;
+    background: #e6e6e6;
+    padding: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+}
+
+#smallZooBoxAvatar {
+}
+
+#smallZooBoxUserInfo {
+    font-size: 75%;
+}
+
+#followInfo {
+    margin-top: 10px;
+    padding-top: 5px;
+    text-align: left;
+    font-size: 75%;
+}
+
+#followForm {
+    margin-top: 10px;
+    padding-bottom: 1px;
 }
 
 /* Zoo CSS */
@@ -578,14 +619,14 @@ ul.users {
     font-size: 65%;
     margin-top: 5px;
     padding-top: 5px;
-    color: #1187ad;
+    color: #38a8cd;
 }
 
 #micropostAgree {
     float: left;
+    font-size: 80%;
     background: #e2f0ca;
     color: #8bb14a;
-    font-size: 85%;
     padding-left: 5px;
     padding-right: 5px;
     margin-top: 5px;
@@ -604,8 +645,8 @@ ul.users {
 
 #micropostDisagree {
     float: left;
+    font-size: 80%;
     background: #f2dbde;
-    font-size: 85%;
     color: #f15d70;
     padding-left: 5px;
     padding-right: 5px;
@@ -625,8 +666,8 @@ ul.users {
 
 #micropostAmused {
     float: left;
+    font-size: 80%;
     background: #fff9e3;
-    font-size: 85%;
     color: #ffc800;
     padding-left: 5px;
     padding-right: 5px;

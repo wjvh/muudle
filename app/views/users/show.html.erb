@@ -61,8 +61,30 @@
    </div>
 
    <div id="userInfo" class="round">
-     <strong>Nickname</strong> <%= @user.name %><br>
-     <strong>Country</strong> <%= @user.country %><br>
-     <strong>E-mail</strong> <%= @user.email %><br>
+     <div id="userDetails">
+       <strong>Nickname</strong> <%= @user.name %><br>
+       <strong>Country</strong> <%= @user.country %><br>
+       <strong>E-mail</strong> <%= @user.email %><br>
+       <div id="followInfo" class="round">
+	 <a href="<%= following_user_path(@user) %>">Following <%= @user.following.count %></a>,
+	 <a href="<%= followers_user_path(@user) %>"><%= @user.followers.count %> Followers</a>
+	 <div id="followForm"><%= render 'follow_form' if user_signed_in? %></div>
+       </div>
+     </div>
+     <div id="userRelationships">
+       <% unless @friends.empty? %>
+        <% @friends.last(12).each do |user| %>
+	<div id="smallZooBox" class="round">
+	    <div id="smallZooBoxAvatar">
+	      <img src="../images/avatars/<%= user.avatar %>_<%= user.mood %>.png" 
+		   alt="Avatar: <%= user.avatar %>, Mood: <%= user.mood %>" height=30 width=30>
+	    </div>
+	    <div id="smallZooBoxUserInfo">
+              <%= link_to user.name, user %>
+	    </div>
+	</div>
+        <% end %>
+      <% end %>
+     </div>
    </div>
 </div>

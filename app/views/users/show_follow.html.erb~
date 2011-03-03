@@ -1,0 +1,21 @@
+<div id="zooContainer">
+  <h1><%= @title %></h1>
+
+<%= will_paginate %>
+
+  <% @users.each do |user| %>
+    <div id="zooBox" class="round">
+       <div id="zooBoxAvatar">
+          <img src="../images/avatars/<%= user.avatar %>_<%= user.mood %>.png" 
+          alt="Avatar: <%= user.avatar %>, Mood: <%= user.mood %>" height=64 width=64>
+       </div>
+       <div id="zooBoxUserInfo">
+          <%= link_to user.name, user %><br>
+          <h2><%= user.email %></h2>
+          <p>Currently&nbsp<strong><%= user.mood %></strong></p>
+       </div>
+    </div>
+  <% end %>
+
+<%= will_paginate %>
+</div>
