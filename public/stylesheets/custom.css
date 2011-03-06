@@ -708,6 +708,7 @@ ul.users {
 
 #zooLeftColumn {
     float: left;
+    width: 711px;
 }
 
 #zooRightColumn {

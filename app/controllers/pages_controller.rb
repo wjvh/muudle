@@ -5,7 +5,7 @@ class PagesController < ApplicationController
   def home
     @title = "The Zoo"
     @micropost = Micropost.new
-    @feed_items = current_user.feed.paginate(:page => params[:page])
+    @feed_items = current_user.feed.paginate(:page => params[:page] :per_page => 12)
 
     @friends = current_user.following & current_user.followers
   end
