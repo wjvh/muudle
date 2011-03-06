@@ -7,7 +7,7 @@
 	     <% if user_signed_in? %>
              <span>Signed in as <strong><%= current_user.name %></strong></span>
              <li><%= link_to "My Muudle", current_user %></li>
-             <li><%= link_to "The Zoo", users_path %></li>
+             <li><%= link_to "The Zoo", home_path %></li>
              <li><%= link_to "Settings", edit_user_registration_path %></li>
              <li><%= link_to "Sign out", destroy_user_session_path %></li>
 	     <% else %>

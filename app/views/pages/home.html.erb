@@ -1,7 +1,22 @@
-<h1>This is muudle.&nbsp<span>(moo-dul) noun or verb</span></h1>
-<p><span>
- A mood muddle. An emotion bubble.<br>
- A huddle for how your friends are feeling.</span>
-</p>
-<hr><br>
-<%= link_to signupButton, new_user_registration_path %>
+<div id="zooLeftColumn">
+  <div id="zooLandscape" class="round"></div>
+  <div id="zooFeed">
+    <%= render 'shared/feed' %>
+  </div>
+</div>
+<div id="zooRightColumn" class="round">
+ <h2>Friends</h2>
+<% unless @friends.empty? %>
+<% @friends.last(24).each do |user| %>
+<div id="smallZooBox" class="round">
+  <div id="smallZooBoxAvatar">
+    <img src="../images/avatars/<%= user.avatar %>_<%= user.mood %>.png" 
+	 alt="Avatar: <%= user.avatar %>, Mood: <%= user.mood %>" height=40 width=40>
+  </div>
+  <div id="smallZooBoxUserInfo">
+    <%= link_to user.name, user %>
+  </div>
+</div>
+<% end %>
+<% end %>
+</div>

@@ -17,7 +17,7 @@ class Micropost < ActiveRecord::Base
   # Return microposts from the users being followed by the given user.
   scope :from_users_followed_by, lambda { |user| followed_by(user) }
 
-private
+  private
 
     # Return an SQL condition for users followed by the given user.
     # We include the user's own id as well.

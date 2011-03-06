@@ -1,0 +1,27 @@
+<div id="micropost" class="round">
+      <% if current_user == feed_item.user || current_user == feed_item.author %>
+      <div id="adminOptions" class="round">
+      <%= link_to "x", feed_item,      :method => :delete,
+                                       :confirm => "You sure?",
+                                       :title => feed_item.content %>
+      </div>
+      <% end %>
+
+    <div id="micropostImage">
+      <img src="../images/avatars/<%= feed_item.user.avatar %>_<%= feed_item.mood %>.png" 
+           alt="Avatar: <%= feed_item.user.avatar %>, Mood: <%= feed_item.mood %>" height=50 width=50>
+    </div>
+    <div id="micropostContainer">
+      <div id="micropostContent"><strong><%= feed_item.user.name %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %></div>
+
+      <% if feed_item.user.name == feed_item.author %>
+	<div id="micropostStampBlue" class="round">
+	  Posted <%= time_ago_in_words(feed_item.created_at) %> ago by <%= feed_item.author %>.
+	</div>
+      <% else %>
+	<div id="micropostStamp" class="round">
+	  Posted <%= time_ago_in_words(feed_item.created_at) %> ago by <%= feed_item.author %>.
+	</div>
+      <% end %>
+    </div>
+</div>

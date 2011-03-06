@@ -10,6 +10,11 @@ module ApplicationHelper
     end
   end
 
+  def home
+    @micropost = Micropost.new
+    @feed_items = current_user.feed.paginate(:page => params[:page])
+  end
+
   def user_of_page
     User.find_by_name(params[:id])
   end

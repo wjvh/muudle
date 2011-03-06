@@ -248,7 +248,7 @@ footer nav {
 
 /* Profile CSS */
 #profileContainer {
- width: 720px;
+ width: 730px;
  margin: 0 auto;
  text-align: center;
 }
@@ -290,7 +290,7 @@ footer nav {
 
 #snitch {
  clear: both;
- width: 720px;
+ width: 730px;
  font-size: 85%;
  background: #f1f7f9;
  float: right;
@@ -366,8 +366,8 @@ footer nav {
 
 #userRelationships {
     float: left;
-    margin-left: 10px;
-    height: 100px;
+    width: 540px;
+    height: 175px;
 }
 
 #smallZooBox {
@@ -376,6 +376,7 @@ footer nav {
     height: 70px;
     background: #e6e6e6;
     padding: 5px;
+    margin-bottom: 10px;
     margin-left: 10px;
     text-align: center;
 }
@@ -529,10 +530,15 @@ td.sidebar {
 
 .field_with_errors {
   margin: 0px auto;
-  padding:5px;
+  padding: 2px;
+  padding-left: 6px;
+  padding-right: 6px;
   background-color: #c9282d;
   display: table;
   text-align: center;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
 }
 
 .field_with_errors label {
@@ -547,6 +553,9 @@ td.sidebar {
   margin-bottom: 10px;
   background-color: #fff;
   text-align: center;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
 }
 
 #error_explanation h2 {
@@ -558,6 +567,9 @@ td.sidebar {
   margin-bottom: 10px;
   background-color: #c9282d;
   color: #fff;
+  -moz-border-radius:    10px;
+  -webkit-border-radius: 10px;
+  border-radius:         10px;
 }
 
 #error_explanation p {
@@ -690,6 +702,43 @@ ul.users {
     font-size: 80%;
     background: #fff9e3;
     border: 1px solid #fff9e3;
+}
+
+/* Zoo page */
+
+#zooLeftColumn {
+    float: left;
+}
+
+#zooRightColumn {
+    float: right;
+    background: #f3f3f3;
+    width: 217px;
+    margin-left: 20px;
+    padding: 10px;
+    padding-top: 20px;
+}
+
+#zooRightColumn h2 {
+    font-family: GillSansUltraBold;
+    font-size: 30px;
+    letter-spacing: -2px;
+    color: #353535;
+    line-height: 20px;
+}
+
+#zooLandscape {
+    width: 711px;
+    height: 517px;
+    background: url(../images/landscape.jpg);
+    margin-bottom: 20px;
+}
+
+#zooFeed h2 {
+    font-family: GillSansUltraBold;
+    font-size: 30px;
+    letter-spacing: -2px;
+    color: #353535;
 }
 
 /* CSS for Pagination */
