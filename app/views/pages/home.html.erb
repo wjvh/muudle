@@ -6,6 +6,8 @@
 </div>
 <div id="zooRightColumn" class="round">
  <h2>Friends</h2>
+ <%= link_to "Find your friends!", users_path %>
+
 <% unless @friends.empty? %>
 <% @friends.last(24).each do |user| %>
 <div id="smallZooBox" class="round">
