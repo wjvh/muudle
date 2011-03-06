@@ -12,7 +12,7 @@
            alt="Avatar: <%= feed_item.user.avatar %>, Mood: <%= feed_item.mood %>" height=50 width=50>
     </div>
     <div id="micropostContainer">
-      <div id="micropostContent"><strong><%= feed_item.user.name %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %></div>
+      <div id="micropostContent"><strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %></div>
 
       <% if feed_item.user.name == feed_item.author %>
 	<div id="micropostStampBlue" class="round">

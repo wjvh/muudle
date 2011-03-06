@@ -1,12 +1,13 @@
-<div id="zooLeftColumn">
+<div id="zooLeftColumn" class="round">
   <div id="zooLandscape" class="round"></div>
+
   <div id="zooFeed">
     <%= render 'shared/feed' %>
   </div>
 </div>
 <div id="zooRightColumn" class="round">
  <h2>Friends</h2>
- <%= link_to "Find your friends!", users_path %>
+ <%= link_to "Find your friends!", users_path %><br><br>
 
 <% unless @friends.empty? %>
 <% @friends.last(24).each do |user| %>

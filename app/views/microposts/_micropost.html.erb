@@ -32,7 +32,7 @@
 	    <%= f.hidden_field :disagree, :value => "0" %>
 	    <%= f.hidden_field :amused, :value => "0" %>
 	    <%= f.submit "Fo sho!" %>
-	    (<%= micropost.agree %>)
+	    <strong>(<%= micropost.agree %>)</strong>
 	  <% end %>
 	</div>
 	<div id="micropostDisagree" class="round">
@@ -42,7 +42,7 @@
 	    <%= f.hidden_field :disagree, :value => "1" %>
 	    <%= f.hidden_field :amused, :value => "0" %>
 	    <%= f.submit "Hells no." %>
-	    (<%= micropost.disagree %>)
+	    <strong>(<%= micropost.disagree %>)</strong>
 	  <% end %>
 	</div>
 	<div id="micropostAmused" class="round">
@@ -52,7 +52,7 @@
 	    <%= f.hidden_field :disagree, :value => "0" %>
 	    <%= f.hidden_field :amused, :value => "1" %>
 	    <%= f.submit "WTFLOL" %>
-	    (<%= micropost.amused %>)
+	    <strong>(<%= micropost.amused %>)</strong>
 	  <% end %>
 	</div>
     </div>
