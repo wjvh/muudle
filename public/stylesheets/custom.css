@@ -618,6 +618,7 @@ ul.users {
 #micropostContent {
     text-align: left;
     padding-bottom: 2px;
+    font-size: 80%;
 }
 
 #micropostStamp { 
