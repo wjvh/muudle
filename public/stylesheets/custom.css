@@ -366,8 +366,9 @@ footer nav {
 
 #userRelationships {
     float: left;
-    width: 520px;
+    width: 510px;
     height: 175px;
+    background: #000000;
 }
 
 #smallZooBox {
