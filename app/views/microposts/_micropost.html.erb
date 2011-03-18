@@ -14,7 +14,17 @@
            alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
     </div>
     <div id="micropostContainer">
-      <div id="micropostContent"><span><strong><%= micropost.mood %></strong> because <%= micropost.content %></span></div>
+      <div id="micropostContent">
+	<% if micropost.private == true %>
+	   <% if current_user.name == micropost.user.name || current_user.name == micropost.author %>
+	   <strong><%= micropost.mood %></strong> because <span><%= micropost.content %></span>
+	   <% else %>
+	   <strong><%= micropost.mood %></strong> because <span><strong>private message</strong></span>
+	   <% end %>
+	<% else %>
+	<strong><%= micropost.mood %></strong> because <%= micropost.content %>
+	<% end %>
+      </div>
 
 	<div id="micropostStamp" class="round">
 	  Posted <%= time_ago_in_words(micropost.created_at) %> ago by <%= micropost.author %> |
@@ -74,7 +84,17 @@
            alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
     </div>
     <div id="micropostContainer">
-      <div id="micropostContent"><span><strong><%= micropost.mood %></strong> because <%= micropost.content %></span></div>
+      <div id="micropostContent">
+	<% if micropost.private == true %>
+	   <% if current_user.name == micropost.user.name || current_user.name == micropost.author %>
+	   <strong><%= micropost.mood %></strong> because <span><%= micropost.content %></span>
+	   <% else %>
+	   <strong><%= micropost.mood %></strong> because <span><strong>private message</strong></span>
+	   <% end %>
+	<% else %>
+	<strong><%= micropost.mood %></strong> because <%= micropost.content %>
+	<% end %>
+      </div>
 
 	<div id="micropostStamp" class="round">
 	  Posted <%= time_ago_in_words(micropost.created_at) %> ago by <%= micropost.author %> |

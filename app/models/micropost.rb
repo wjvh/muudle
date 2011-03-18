@@ -1,5 +1,5 @@
 class Micropost < ActiveRecord::Base
-  attr_accessible :content, :author, :agree, :disagree, :amused, :mood, :belongs_to_id
+  attr_accessible :content, :author, :agree, :disagree, :amused, :mood, :belongs_to_id, :private
 
   belongs_to :user
 

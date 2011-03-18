@@ -283,6 +283,11 @@ footer nav {
     font-size: 90%;
 }
 
+#mood h3 span {
+    color: #d6083b;
+    font-size: 100%;
+}
+
 #mood span {
     font-size: 75%;
     color: #c3c2c2;
@@ -291,6 +296,7 @@ footer nav {
 #snitch {
  clear: both;
  width: 730px;
+ height: 50px;
  font-size: 85%;
  background: #f1f7f9;
  float: right;
@@ -299,6 +305,19 @@ footer nav {
 
 #snitch span {
     font-size: 80%;
+}
+
+#privateOption {
+    color: #d6083b;
+    font-size: 85%;
+    background: #fae8ed;
+    padding-top: 2px;
+    padding-bottom: 3px;
+    padding-left: 5px;
+    padding-right: 7px;
+    margin-right: 15px;
+    margin-top: 4px;
+    float: right;
 }
 
 #toggleMoodHistoryButton {
@@ -712,6 +731,10 @@ ul.users {
 
 #micropostContent {
     text-align: left;
+}
+
+#micropostContent span {
+    color: #d6083b;
 }
 
 #micropostStamp { 

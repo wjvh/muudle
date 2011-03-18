@@ -74,7 +74,7 @@
 </div>
 <div id="zooRightColumn" class="round">
  <h2>Friends</h2>
-<div id="findFriends" class="round"><%= link_to "Find your friends!", users_path %></div>
+<div id="findFriends" class="round"><strong><%= link_to "Find your friends!", users_path %></strong></div>
 
 <% unless @friends.empty? %>
 <% @friends.last(12).each do |user| %>

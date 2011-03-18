@@ -18,7 +18,19 @@
 	 <% end %>
 	 <strong><%= @user.mood %></strong></h2>
          <% unless @user.microposts.empty? %>
-         <h3><%= @user.microposts.first.content %></h3><br>
+         <h3>
+	   <% if @user.microposts.first.private == true %>
+	   <% if current_user.name == @user.name || current_user.name == @user.microposts.first.author %>
+	   <span>
+	   <%= @user.microposts.first.content %>
+	   <% else %>
+	   <strong>private message</strong>
+	   </span>
+	   <% end %>
+	   <% else %>
+	   <%= @user.microposts.first.content %>
+	   <% end %>
+	 </h3><br>
          <span>Posted <%= time_ago_in_words(@user.microposts.first.created_at) %> ago by <%= @user.microposts.first.author %>.</span>
 	 <% end %>
        </div>
@@ -35,13 +47,15 @@
 	 <%= f.hidden_field :amused, :value => "0" %>
        </div>
 
-       <div class="field">
 	<strong><%= @user.name %></strong> is feeling
 	 <%= f.select :mood, User::MOODS %>
 	 because
 	 <%= f.text_field :content %> <span>(75 characters max.)</span>
+	 <div id="privateOption" class="round">
+	   <%= f.check_box :private, {}, "true", "false" %>Private
+	 </div>
 	 <%= f.submit "Snitch!" %>
-       </div>
+ 
        <% end %>
      </div>
 

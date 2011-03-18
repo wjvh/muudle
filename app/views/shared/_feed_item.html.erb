@@ -13,7 +13,17 @@
          alt="Avatar: <%= feed_item.user.avatar %>, Mood: <%= feed_item.mood %>" height=50 width=50>
   </div>
   <div id="micropostContainer">
-    <div id="micropostContent"><span><strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %></span></div>
+    <div id="micropostContent">
+      <% if feed_item.private == true %>
+      <% if current_user.name == feed_item.user.name || current_user.name == feed_item.author %>
+      <strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <span><%= feed_item.content %></span>
+      <% else %>
+      <strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <span><strong>private message</strong></span>
+      <% end %>
+      <% else %>
+      <strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %>
+      <% end %>
+    </div>
   
     <div id="micropostStamp" class="round">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago by <%= feed_item.author %>.
@@ -36,7 +46,17 @@
          alt="Avatar: <%= feed_item.user.avatar %>, Mood: <%= feed_item.mood %>" height=50 width=50>
   </div>
   <div id="micropostContainer">
-    <div id="micropostContent"><span><strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %></span></div>
+    <div id="micropostContent">
+      <% if feed_item.private == true %>
+      <% if current_user.name == feed_item.user.name || current_user.name == feed_item.author %>
+      <strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <span><%= feed_item.content %></span>
+      <% else %>
+      <strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <span><strong>private message</strong></span>
+      <% end %>
+      <% else %>
+      <strong><%= link_to feed_item.user.name, feed_item.user %></strong> is feeling <strong><%= feed_item.mood %></strong> because <%= feed_item.content %>
+      <% end %>
+    </div>
   
     <div id="micropostStamp" class="round">
       Posted <%= time_ago_in_words(feed_item.created_at) %> ago by <%= feed_item.author %>.
