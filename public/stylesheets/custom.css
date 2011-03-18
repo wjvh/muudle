@@ -382,6 +382,7 @@ footer nav {
 }
 
 #smallZooBoxAvatar {
+    padding-top: 5px;
 }
 
 #smallZooBoxUserInfo {
@@ -389,7 +390,81 @@ footer nav {
 }
 
 /* Zoo CSS */
+#zooFriendText {
+    background: #e6e6e6;
+    padding: 5px;
+    opacity: 0.9;
+}
+
+#zooFriend1 {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    margin-top: 250px;
+    font-size: 80%;
+    line-height: 14px;
+    text-align: center;
+}
+
+#zooFriend2 {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    margin-top: 375px;
+    font-size: 80%;
+    line-height: 14px;
+    text-align: center;
+}
+
+#zooFriend3 {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    margin-top: 300px;
+    font-size: 80%;
+    line-height: 14px;
+    text-align: center;
+}
+
+#zooFriend4 {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    margin-top: 350px;
+    font-size: 80%;
+    line-height: 14px;
+    text-align: center;
+}
+
+#zooFriend5 {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    margin-top: 375px;
+    font-size: 80%;
+    line-height: 14px;
+    text-align: center;
+}
+
+#zooFriend6 {
+    width: 100px;
+    height: 150px;
+    margin: 10px;
+    float: left;
+    margin-top: 300px;
+    font-size: 80%;
+    line-height: 14px;
+    text-align: center;
+}
+
 #zooContainer {
+    margin: 10px;
+    background: #000000;
 }
 
 #zooContainer h1 {
@@ -602,12 +677,26 @@ ul.users {
     padding: 10px;
     background: #f3f3f3;
     margin-bottom: 10px;
-    height: 50px;
+    height: 45px;
+}
+
+#micropost span {
+    font-size: 85%;
+}
+
+#micropostBlue {
+    padding: 10px;
+    background: #f1f7f9;
+    margin-bottom: 10px;
+    height: 45px;
+}
+
+#micropostBlue span {
+    font-size: 85%;
 }
 
 #micropostImage {
     float: left;
-    padding-top: 7px;
     padding-right: 10px;
 }
 
@@ -615,93 +704,70 @@ ul.users {
     float: left;
 }
 
+#micropostSeparator {
+    float: left;
+    color: #b0b0b0;
+    font-size: 75%;
+    padding-top: 2px;
+}
+
 #micropostContent {
     text-align: left;
-    font-size: 80%;
 }
 
 #micropostStamp { 
     float: left;
-    width: 320px;
-    height: 19px;
-    background: #e6e6e6;
     font-size: 65%;
-    margin-top: 5px;
-    padding-top: 5px; 
-}
-
-#micropostStampBlue {
-    float: left;
-    width: 320px;
-    height: 19px;
-    background: #e6e6e6;
-    font-size: 65%;
-    margin-top: 5px;
-    padding-top: 5px;
-    color: #38a8cd;
+    text-align: left;
+    padding-top: 3px;
+    color: #b0b0b0;
 }
 
 #micropostAgree {
     float: left;
-    font-size: 80%;
-    background: #e6e6e6;
+    font-size: 60%;
     color: #8bb14a;
-    padding-left: 5px;
     padding-right: 5px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 5px;
 }
 
 #micropostAgree input {
-    width: 50px;
+    width: 25px;
     height: 24px;
-    font-size: 80%;
     color: #8bb14a;
-    background: #e6e6e6;
-    border: 1px solid #e6e6e6;
+    background: transparent;
+    border: 0px;
+    font-size: 115%;
 }
 
 #micropostDisagree {
     float: left;
-    font-size: 80%;
-    background: #e6e6e6;
+    font-size: 60%;
     color: #f15d70;
-    padding-left: 6px;
-    padding-right: 6px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 10px;
+    padding-right: 5px;
 }
 
 #micropostDisagree input {
-    width: 50px;
+    width: 45px;
     color: #f15d70;
     height: 24px;
-    font-size: 80%;
-    background: #e6e6e6;
-    border: 1px solid #e6e6e6;
+    background: transparent;
+    border: 0px;
+    font-size: 115%;
 }
 
 #micropostAmused {
     float: left;
-    font-size: 80%;
-    background: #e6e6e6;
+    font-size: 60%;
     color: #991671;
-    padding-left: 6px;
-    padding-right: 6px;
-    margin-top: 5px;
-    margin-left: 10px;
-    margin-bottom: 5px;
 }
 
 #micropostAmused input {
-    width: 52px;
+    width: 20px;
     color: #991671;
     height: 24px;
-    font-size: 80%;
-    background: #e6e6e6;
-    border: 0px solid #e6e6e6;
+    background: transparent;
+    border: 0px;
+    font-size: 115%;
 }
 
 /* Zoo page */
@@ -742,6 +808,13 @@ ul.users {
     font-size: 30px;
     letter-spacing: -2px;
     color: #353535;
+}
+
+#findFriends {
+    background: #e6e6e6;
+    padding: 5px;
+    margin: 10px;
+    margin-bottom: 20px;
 }
 
 #toggleZooFeedButton {

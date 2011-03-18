@@ -1,3 +1,64 @@
+<% if @user.name == micropost.author %>
+<div id="micropostBlue" class="round">
+
+      <% if current_user.name == micropost.user.name || current_user.name == micropost.author %>
+      <div id="adminOptions" class="round">
+      <%= link_to "x", micropost, :method => :delete,
+                                       :confirm => "You sure?",
+                                       :title => micropost.content %>
+      </div>
+      <% end %>
+
+    <div id="micropostImage">
+      <img src="../images/avatars/<%= @user.avatar %>_<%= micropost.mood %>.png" 
+           alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
+    </div>
+    <div id="micropostContainer">
+      <div id="micropostContent"><span><strong><%= micropost.mood %></strong> because <%= micropost.content %></span></div>
+
+	<div id="micropostStamp" class="round">
+	  Posted <%= time_ago_in_words(micropost.created_at) %> ago by <%= micropost.author %> |
+	</div>
+
+	<div id="micropostAgree" class="round">
+	  <%= form_for @micropost, :url => { :controller => :microposts, :action => :edit }, :html => { :method => :get } do |f| %>
+	    <%= f.hidden_field :id, :value => micropost.id %>
+	    <%= f.hidden_field :agree, :value => "1" %>
+	    <%= f.hidden_field :disagree, :value => "0" %>
+	    <%= f.hidden_field :amused, :value => "0" %>
+	    <%= f.submit "like" %>
+	    <strong>(<%= micropost.agree %>)</strong>
+	  <% end %>
+	</div>
+
+	<div id="micropostSeparator"> | </div>
+
+	<div id="micropostDisagree" class="round">
+	  <%= form_for @micropost, :url => { :controller => :microposts, :action => :edit }, :html => { :method => :get } do |f| %>
+	    <%= f.hidden_field :id, :value => micropost.id %>
+	    <%= f.hidden_field :agree, :value => "0" %>
+	    <%= f.hidden_field :disagree, :value => "1" %>
+	    <%= f.hidden_field :amused, :value => "0" %>
+	    <%= f.submit "dislike" %>
+	    <strong>(<%= micropost.disagree %>)</strong>
+	  <% end %>
+	</div>
+
+	<div id="micropostSeparator"> | </div>
+
+	<div id="micropostAmused" class="round">
+	  <%= form_for @micropost, :url => { :controller => :microposts, :action => :edit }, :html => { :method => :get } do |f| %>
+	    <%= f.hidden_field :id, :value => micropost.id %>
+	    <%= f.hidden_field :agree, :value => "0" %>
+	    <%= f.hidden_field :disagree, :value => "0" %>
+	    <%= f.hidden_field :amused, :value => "1" %>
+	    <%= f.submit "lol" %>
+	    <strong>(<%= micropost.amused %>)</strong>
+	  <% end %>
+	</div>
+    </div>
+</div>
+<% else %>
 <div id="micropost" class="round">
 
       <% if current_user.name == micropost.user.name || current_user.name == micropost.author %>
@@ -13,17 +74,11 @@
            alt="Avatar: <%= @user.avatar %>, Mood: <%= micropost.mood %>" height=50 width=50>
     </div>
     <div id="micropostContainer">
-      <div id="micropostContent"><strong><%= micropost.mood %></strong> because <%= micropost.content %></div>
+      <div id="micropostContent"><span><strong><%= micropost.mood %></strong> because <%= micropost.content %></span></div>
 
-      <% if @user.name == micropost.author %>
-	<div id="micropostStampBlue" class="round">
-	  Posted <%= time_ago_in_words(micropost.created_at) %> ago by <%= micropost.author %>.
-	</div>
-      <% else %>
 	<div id="micropostStamp" class="round">
-	  Posted <%= time_ago_in_words(micropost.created_at) %> ago by <%= micropost.author %>.
+	  Posted <%= time_ago_in_words(micropost.created_at) %> ago by <%= micropost.author %> |
 	</div>
-      <% end %>
 
 	<div id="micropostAgree" class="round">
 	  <%= form_for @micropost, :url => { :controller => :microposts, :action => :edit }, :html => { :method => :get } do |f| %>
@@ -31,29 +86,36 @@
 	    <%= f.hidden_field :agree, :value => "1" %>
 	    <%= f.hidden_field :disagree, :value => "0" %>
 	    <%= f.hidden_field :amused, :value => "0" %>
-	    <%= f.submit "Fo sho!" %>
+	    <%= f.submit "like" %>
 	    <strong>(<%= micropost.agree %>)</strong>
 	  <% end %>
 	</div>
+
+	<div id="micropostSeparator"> | </div>
+
 	<div id="micropostDisagree" class="round">
 	  <%= form_for @micropost, :url => { :controller => :microposts, :action => :edit }, :html => { :method => :get } do |f| %>
 	    <%= f.hidden_field :id, :value => micropost.id %>
 	    <%= f.hidden_field :agree, :value => "0" %>
 	    <%= f.hidden_field :disagree, :value => "1" %>
 	    <%= f.hidden_field :amused, :value => "0" %>
-	    <%= f.submit "Hells no." %>
+	    <%= f.submit "dislike" %>
 	    <strong>(<%= micropost.disagree %>)</strong>
 	  <% end %>
 	</div>
+
+	<div id="micropostSeparator"> | </div>
+
 	<div id="micropostAmused" class="round">
 	  <%= form_for @micropost, :url => { :controller => :microposts, :action => :edit }, :html => { :method => :get } do |f| %>
 	    <%= f.hidden_field :id, :value => micropost.id %>
 	    <%= f.hidden_field :agree, :value => "0" %>
 	    <%= f.hidden_field :disagree, :value => "0" %>
 	    <%= f.hidden_field :amused, :value => "1" %>
-	    <%= f.submit "WTFLOL" %>
+	    <%= f.submit "lol" %>
 	    <strong>(<%= micropost.amused %>)</strong>
 	  <% end %>
 	</div>
     </div>
 </div>
+<% end %>

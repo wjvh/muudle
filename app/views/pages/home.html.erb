@@ -1,5 +1,72 @@
 <div id="zooLeftColumn" class="round">
-  <div id="zooLandscape" class="round"></div>
+  <div id="zooLandscape" class="round">
+    <div id="zooFriend1">
+      <% unless @friends[0] == nil %>
+      <img src="../images/avatars/<%= @friends[0].avatar %>_<%= @friends[0].mood %>.png" 
+	   alt="Avatar: <%= @friends[0].avatar %>, Mood: <%= @friends[0].mood %>" height=100 width=100>
+      <div id="zooFriendText" class="round">
+	<strong><%= @friends[0].name %></strong>
+	<br>
+	<%= @friends[0].mood %>
+      </div>
+      <% end %>
+    </div>
+    <div id="zooFriend2">
+      <% unless @friends[1] == nil %>
+      <img src="../images/avatars/<%= @friends[1].avatar %>_<%= @friends[1].mood %>.png" 
+	   alt="Avatar: <%= @friends[1].avatar %>, Mood: <%= @friends[1].mood %>" height=100 width=100>
+      <div id="zooFriendText" class="round">
+	<strong><%= @friends[1].name %></strong>
+	<br>
+	<%= @friends[1].mood %>
+      </div>
+      <% end %>
+    </div>
+    <div id="zooFriend3">
+      <% unless @friends[2] == nil %>
+      <img src="../images/avatars/<%= @friends[2].avatar %>_<%= @friends[2].mood %>.png" 
+	   alt="Avatar: <%= @friends[2].avatar %>, Mood: <%= @friends[2].mood %>" height=100 width=100>
+      <div id="zooFriendText" class="round">
+	<strong><%= @friends[2].name %></strong>
+	<br>
+	<%= @friends[2].mood %>
+      </div>
+      <% end %>
+    </div>
+    <div id="zooFriend4">
+      <% unless @friends[3] == nil %>
+      <img src="../images/avatars/<%= @friends[3].avatar %>_<%= @friends[3].mood %>.png" 
+	   alt="Avatar: <%= @friends[3].avatar %>, Mood: <%= @friends[3].mood %>" height=100 width=100>
+      <div id="zooFriendText" class="round">
+	<strong><%= @friends[3].name %></strong>
+	<br>
+	<%= @friends[3].mood %>
+      </div>
+      <% end %>
+    </div>
+    <div id="zooFriend5">
+      <% unless @friends[4] == nil %>
+      <img src="../images/avatars/<%= @friends[4].avatar %>_<%= @friends[4].mood %>.png" 
+	   alt="Avatar: <%= @friends[4].avatar %>, Mood: <%= @friends[4].mood %>" height=100 width=100>
+      <div id="zooFriendText" class="round">
+	<strong><%= @friends[4].name %></strong>
+	<br>
+	<%= @friends[4].mood %>
+      </div>
+      <% end %>
+    </div>
+    <div id="zooFriend6">
+      <% unless @friends[5] == nil %>
+      <img src="../images/avatars/<%= @friends[5].avatar %>_<%= @friends[5].mood %>.png" 
+	   alt="Avatar: <%= @friends[5].avatar %>, Mood: <%= @friends[5].mood %>" height=100 width=100>
+      <div id="zooFriendText" class="round">
+	<strong><%= @friends[5].name %></strong>
+	<br>
+	<%= @friends[5].mood %>
+      </div>
+      <% end %>
+    </div>
+  </div>
 
   <div id="zooFeed">
     <%= render 'shared/feed' %>
@@ -7,10 +74,10 @@
 </div>
 <div id="zooRightColumn" class="round">
  <h2>Friends</h2>
- <%= link_to "Find your friends!", users_path %><br><br>
+<div id="findFriends" class="round"><%= link_to "Find your friends!", users_path %></div>
 
 <% unless @friends.empty? %>
-<% @friends.last(24).each do |user| %>
+<% @friends.last(12).each do |user| %>
 <div id="smallZooBox" class="round">
   <div id="smallZooBoxAvatar">
     <img src="../images/avatars/<%= user.avatar %>_<%= user.mood %>.png" 
